@@ -1,28 +1,28 @@
 
-let jour = prompt("Quel jour de la semaine es-tu ?");
+let nbr1 = prompt("Saisissez le premier nombre :");
+let operateur = prompt("Saisissez l'opérateur (+, -, * ou /) :");
+let nbr2 = prompt("Saisissez le deuxième nombre :");
 
-switch (jour) {
-    case "lundi":
-        console.log("Tu as cours à MolenGeek et tu as sport en soirée.");
+nbr1 = Number(nbr1);
+nbr2 = Number(nbr2);
+
+let resultat;
+switch (operateur) {
+    case "+":
+        resultat = nbr1 + nbr2;
         break;
-    case "mardi":
-        console.log("Tu as réunion de travail le matin et yoga le soir avec l'autre meuf la.");
+    case "-":
+        resultat = nbr1 - nbr2;
         break;
-    case "mercredi":
-        console.log("Tu as cours de danse le matin et un rendez-vous chez le médecin l'après-midi.");
+    case "*":
+        resultat = nbr1 * nbr2;
         break;
-    case "jeudi":
-        console.log("Tu as soirée jeux en ligne avec tes amis.");
-        break;
-    case "vendredi":
-        console.log("Tu as rendez-vous au salon de coiffure et sortie cinéma avec tes collègues.");
-        break;
-    case "samedi":
-        console.log("Tu as match de foot le matin et barbecue avec ta famille l'après-midi.");
-        break;
-    case "dimanche":
-        console.log("Tu as promenade en forêt avec ton chien et après-midi lecture au calme.");
+    case "/":
+        resultat = nbr1 / nbr2;
         break;
     default:
-        console.log("Je ne connais pas ce jour de la semaine.");
+        console.log("Opérateur non reconnu");
 }
+
+
+console.log(resultat);
